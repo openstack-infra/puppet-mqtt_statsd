@@ -1,0 +1,11 @@
+[Unit]
+Description=mqtt_statsd Daemon
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/mqtt_statsd /etc/mqtt_statsd.yaml
+User=mqtt_statsd
+Group=mqtt_stasd
+
+[Install]
+WantedBy=multi-user.target
