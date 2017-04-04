@@ -21,7 +21,7 @@ class mqtt_statsd::server (
   $statsd_port = 8125,
 ){
 
-  file { '/etc/mqtt_statsd.conf':
+  file { '/etc/mqtt_statsd.yaml':
     ensure  => present,
     owner   => 'root',
     group   => 'root',
