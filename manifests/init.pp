@@ -14,7 +14,7 @@ class mqtt_statsd(
 ){
   include ::pip
 
-  vcsrepo { $source_dir :
+  vcsrepo { "$source_dir" :
     ensure   => latest,
     provider => git,
     revision => $git_revision,
@@ -22,7 +22,7 @@ class mqtt_statsd(
   }
 
   exec { 'install_mqtt_statsd' :
-    command     => "pip install -U $soure_dir",
+    command     => "pip install -U $source_dir",
     path        => '/usr/local/bin:/usr/bin:/bin/',
     refreshonly => true,
     subscribe   => Vcsrepo["$source_dir"],
