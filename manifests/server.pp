@@ -48,13 +48,6 @@ class mqtt_statsd::server (
     require    => Group['mqtt_statsd'],
   }
 
-  file { '/etc/systemd/system/mqtt_statsd.service':
-    ensure  => present,
-    owner   => 'root',
-    group   => 'root',
-    content => template('mqtt_statsd/mqtt_statsd.service.erb')
-  }
-
   service { 'mqtt_statsd':
     enable     => true,
     hasrestart => true,
