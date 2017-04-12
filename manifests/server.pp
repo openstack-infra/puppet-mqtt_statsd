@@ -19,6 +19,7 @@ class mqtt_statsd::server (
   $statsd_hostname,
   $mqtt_port = 1883,
   $statsd_port = 8125,
+  $statsd_prefix = 'mosquitto',
 ){
 
   file { '/etc/mqtt_statsd.yaml':
