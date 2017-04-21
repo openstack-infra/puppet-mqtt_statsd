@@ -10,13 +10,15 @@ topics:
     statsd_topic: heap_size
   - mqtt_topic: $SYS/broker/clients/total
     statsd_topic: total_clients
-  - mqtt_topic: $SYS/broker/bytes/received
+  - mqtt_topic: $SYS/broker/load/bytes/received/1min
     statsd_topic: bytes_recieved
-  - mqtt_topic: $SYS/broker/bytes/sent
+  - mqtt_topic: $SYS/broker/load/bytes/sent/1min
     statsd_topic: bytes_sent
   - mqtt_topic: $SYS/broker/subscriptions/count
     statsd_topic: subscription_count
-  - mqtt_topic: $SYS/broker/messages/received
+  - mqtt_topic: $SYS/broker/load/messages/received/1min
     statsd_topic: messages_recieved
-  - mqtt_topic: $SYS/broker/messages/sent
+  - mqtt_topic: $SYS/broker/load/messages/sent/1min
     statsd_topic: messages_sent
+  - mqtt_topic: $SYS/broker/load/publish/dropped/1min
+    statsd_topic: messages_dropped
